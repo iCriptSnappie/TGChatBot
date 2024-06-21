@@ -13,7 +13,7 @@ from pyrogram import *
 from pyrogram.types import *
 from nexichat import nexichat
 from nexichat.db import chatsdb
-from nexichat.db import users
+from nexichat.db import usersdb
 from nexichat.db import *
 from nexichat.database import *
 
