@@ -2,8 +2,8 @@ from pymongo import MongoClient
 
 import config
 
-DAXXdb = MongoClient(config.MONGO_URL)
-DAXX = DAXXdb["DAXXDb"]["DAXX"]
+vickdb = MongoClient(config.MONGO_URL)
+vick = vickdb["VickDb"]["Vick"]
 
 
 from .chats import *
