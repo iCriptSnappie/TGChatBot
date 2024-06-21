@@ -90,9 +90,12 @@ async def help(client: nexichat, m: Message):
 @nexichat.on_cmd("repo")
 async def repo_command(_, m: Message):
     try:
+        # Assuming you fetch chat_id using a method like m.chat.id (hypothetical example)
+        chat_id = m.chat.id
+        
         # Assuming `send_video` is provided by `nexichat` or a related library
         await nexichat.send_video(
-            m.chat_id,
+            chat_id,
             SOURCE_MEDIA,
             has_spoiler=True
         )
@@ -104,6 +107,7 @@ async def repo_command(_, m: Message):
         )
     except Exception as e:
         print(f"Error in repo_command: {e}")
+
 
 
 @nexichat.on_message(filters.new_chat_members)
