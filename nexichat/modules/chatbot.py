@@ -1,4 +1,3 @@
-
 import random
 from Abg.chat_status import adminsOnly
 
@@ -7,9 +6,9 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatAction
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from config import MONGO_URL
-from nexichat import nexichat
-from nexichat.modules.helpers import CHATBOT_ON, is_admins
+from config import MONGO_URL, MSG_POST_URL
+from Mickey import nexichat
+from Mickey.modules.helpers import CHATBOT_ON, is_admins
 
 
 @nexichat.on_cmd("chatbot", group_only=True)
@@ -23,13 +22,12 @@ async def chaton_(_, m: Message):
 
 
 @nexichat.on_message(
-    (filters.text | filters.sticker | filters.group) & ~filters.private & ~filters.bot, group=4
+    (filters.text | filters.sticker | filters.group) & ~filters.bot, group=4
 )
 async def chatbot_text(client: Client, message: Message):
     try:
         if (
             message.text.startswith("!")
-            or message.text.startswith("/")
             or message.text.startswith("?")
             or message.text.startswith("@")
             or message.text.startswith("#")
@@ -41,10 +39,10 @@ async def chatbot_text(client: Client, message: Message):
     chatai = chatdb["Word"]["WordDb"]
 
     if not message.reply_to_message:
-        DAXXdb = MongoClient(MONGO_URL)
-        DAXX = DAXXdb["DAXXDb"]["DAXX"]
-        is_DAXX = DAXX.find_one({"chat_id": message.chat.id})
-        if not is_DAXX:
+        vickdb = MongoClient(MONGO_URL)
+        vick = vickdb["VickDb"]["Vick"]
+        is_vick = vick.find_one({"chat_id": message.chat.id})
+        if not is_vick:
             await client.send_chat_action(message.chat.id, ChatAction.TYPING)
             K = []
             is_chat = chatai.find({"word": message.text})
@@ -58,14 +56,14 @@ async def chatbot_text(client: Client, message: Message):
                 if Yo == "sticker":
                     await message.reply_sticker(f"{hey}")
                 if not Yo == "sticker":
-                    await message.reply_text(f"{hey}")
+                    await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
 
     if message.reply_to_message:
-        DAXXdb = MongoClient(MONGO_URL)
-        DAXX = DAXXdb["DAXXDb"]["DAXX"]
-        is_DAXX = DAXX.find_one({"chat_id": message.chat.id})
+        vickdb = MongoClient(MONGO_URL)
+        vick = vickdb["VickDb"]["Vick"]
+        is_vick = vick.find_one({"chat_id": message.chat.id})
         if message.reply_to_message.from_user.id == client.id:
-            if not is_DAXX:
+            if not is_vick:
                 await client.send_chat_action(message.chat.id, ChatAction.TYPING)
                 K = []
                 is_chat = chatai.find({"word": message.text})
@@ -79,7 +77,7 @@ async def chatbot_text(client: Client, message: Message):
                     if Yo == "sticker":
                         await message.reply_sticker(f"{hey}")
                     if not Yo == "sticker":
-                        await message.reply_text(f"{hey}")
+                        await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
         if not message.reply_to_message.from_user.id == client.id:
             if message.sticker:
                 is_chat = chatai.find_one(
@@ -112,13 +110,12 @@ async def chatbot_text(client: Client, message: Message):
 
 
 @nexichat.on_message(
-    (filters.sticker | filters.group | filters.text) & ~filters.private & ~filters.bot, group=4
+    (filters.sticker | filters.group | filters.text) & ~filters.bot, group=4
 )
 async def chatbot_sticker(client: Client, message: Message):
     try:
         if (
             message.text.startswith("!")
-            or message.text.startswith("/")
             or message.text.startswith("?")
             or message.text.startswith("@")
             or message.text.startswith("#")
@@ -130,10 +127,10 @@ async def chatbot_sticker(client: Client, message: Message):
     chatai = chatdb["Word"]["WordDb"]
 
     if not message.reply_to_message:
-        DAXXdb = MongoClient(MONGO_URL)
-        DAXX = DAXXdb["DAXXDb"]["DAXX"]
-        is_DAXX = DAXX.find_one({"chat_id": message.chat.id})
-        if not is_DAXX:
+        vickdb = MongoClient(MONGO_URL)
+        vick = vickdb["VickDb"]["Vick"]
+        is_vick = vick.find_one({"chat_id": message.chat.id})
+        if not is_vick:
             await client.send_chat_action(message.chat.id, ChatAction.TYPING)
             K = []
             is_chat = chatai.find({"word": message.sticker.file_unique_id})
@@ -145,16 +142,16 @@ async def chatbot_sticker(client: Client, message: Message):
                 is_text = chatai.find_one({"text": hey})
                 Yo = is_text["check"]
                 if Yo == "text":
-                    await message.reply_text(f"{hey}")
+                    await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
                 if not Yo == "text":
                     await message.reply_sticker(f"{hey}")
 
     if message.reply_to_message:
-        DAXXdb = MongoClient(MONGO_URL)
-        DAXX = DAXXdb["DAXXDb"]["DAXX"]
-        is_DAXX = DAXX.find_one({"chat_id": message.chat.id})
+        vickdb = MongoClient(MONGO_URL)
+        vick = vickdb["VickDb"]["Vick"]
+        is_vick = vick.find_one({"chat_id": message.chat.id})
         if message.reply_to_message.from_user.id == Client.id:
-            if not is_DAXX:
+            if not is_vick:
                 await client.send_chat_action(message.chat.id, ChatAction.TYPING)
                 K = []
                 is_chat = chatai.find({"word": message.text})
@@ -166,7 +163,7 @@ async def chatbot_sticker(client: Client, message: Message):
                     is_text = chatai.find_one({"text": hey})
                     Yo = is_text["check"]
                     if Yo == "text":
-                        await message.reply_text(f"{hey}")
+                        await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
                     if not Yo == "text":
                         await message.reply_sticker(f"{hey}")
         if not message.reply_to_message.from_user.id == Client.id:
@@ -203,13 +200,12 @@ async def chatbot_sticker(client: Client, message: Message):
 
 
 @nexichat.on_message(
-    (filters.text | filters.sticker | filters.group) & ~filters.private & ~filters.bot, group=4
+    (filters.text | filters.sticker | filters.group), group=4
 )
 async def chatbot_pvt(client: Client, message: Message):
     try:
         if (
             message.text.startswith("!")
-            or message.text.startswith("/")
             or message.text.startswith("?")
             or message.text.startswith("@")
             or message.text.startswith("#")
@@ -245,20 +241,16 @@ async def chatbot_pvt(client: Client, message: Message):
             if Yo == "sticker":
                 await message.reply_sticker(f"{hey}")
             if not Yo == "sticker":
-                await message.reply_text(f"{hey}")
+                await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
 
 
 @nexichat.on_message(
-    (filters.sticker | filters.sticker | filters.group)
-    & ~filters.private
-    & ~filters.bot,
-    group=4,
+    (filters.sticker | filters.sticker | filters.group), group=4
 )
 async def chatbot_sticker_pvt(client: Client, message: Message):
     try:
         if (
             message.text.startswith("!")
-            or message.text.startswith("/")
             or message.text.startswith("?")
             or message.text.startswith("@")
             or message.text.startswith("#")
@@ -292,6 +284,6 @@ async def chatbot_sticker_pvt(client: Client, message: Message):
             is_text = chatai.find_one({"text": hey})
             Yo = is_text["check"]
             if Yo == "text":
-                await message.reply_text(f"{hey}")
+                await message.reply_text(f"{hey}\n\n{random.choice(MSG_POST_URL)}")
             if not Yo == "text":
                 await message.reply_sticker(f"{hey}")
