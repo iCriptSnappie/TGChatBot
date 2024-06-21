@@ -11,15 +11,15 @@ DEV_OP = [
     ],
     [
         InlineKeyboardButton(
-            text="✦ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ✦",
+            text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
             url=f"https://t.me/{nexichat.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="« ʜᴇʟᴘ »", callback_data="HELP"),
+        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ & ᴄᴍᴅs 🚀", callback_data="HELP"),
     ],
     [
-       # InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
+        InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
         InlineKeyboardButton(text="☁️ ᴀʙᴏᴜᴛ ☁️", callback_data="ABOUT"),
     ],
 ]
@@ -27,13 +27,19 @@ DEV_OP = [
 PNG_BTN = [
     [
         InlineKeyboardButton(
-            text="😍 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 😍",
+            text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
             url=f"https://t.me/{nexichat.username}?startgroup=true",
         ),
     ],
     [
         InlineKeyboardButton(
-            text="⦿ ᴄʟᴏsᴇ ⦿",
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+            text="✨ ᴄʟᴏsᴇ ✨",
             callback_data="CLOSE",
         ),
     ],
@@ -42,7 +48,13 @@ PNG_BTN = [
 
 BACK = [
     [
-        InlineKeyboardButton(text="⦿ ʙᴀᴄᴋ ⦿", callback_data="BACK"),
+        InlineKeyboardButton(
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
     ],
 ]
 
@@ -53,20 +65,32 @@ HELP_BTN = [
         InlineKeyboardButton(text="🎄 ᴛᴏᴏʟs 🎄", callback_data="TOOLS_DATA"),
     ],
     [
-        InlineKeyboardButton(text="⦿ ʙᴀᴄᴋ ⦿", callback_data="BACK"),
-        InlineKeyboardButton(text="⦿ ᴄʟᴏsᴇ ⦿", callback_data="CLOSE"),
+        InlineKeyboardButton(
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
+        InlineKeyboardButton(text="❄️ ᴄʟᴏsᴇ ❄️", callback_data="CLOSE"),
     ],
 ]
 
 
 CLOSE_BTN = [
     [
-        InlineKeyboardButton(text="⦿ ᴄʟᴏsᴇ ⦿", callback_data="CLOSE"),
+        InlineKeyboardButton(text="❄️ ᴄʟᴏsᴇ ❄️", callback_data="CLOSE"),
     ],
 ]
 
 
 CHATBOT_ON = [
+    [
+        InlineKeyboardButton(
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
+        ),
+    ],
     [
         InlineKeyboardButton(text="ᴇɴᴀʙʟᴇ", callback_data=f"addchat"),
         InlineKeyboardButton(text="ᴅɪsᴀʙʟᴇ", callback_data=f"rmchat"),
@@ -77,28 +101,32 @@ CHATBOT_ON = [
 MUSIC_BACK_BTN = [
     [
         InlineKeyboardButton(text="sᴏᴏɴ", callback_data=f"soom"),
+        InlineKeyboardButton(
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
+        ),
     ],
 ]
 
 S_BACK = [
     [
-        InlineKeyboardButton(text="⦿ ʙᴀᴄᴋ ⦿", callback_data="SBACK"),
-        InlineKeyboardButton(text="⦿ ᴄʟᴏsᴇ ⦿", callback_data="CLOSE"),
+        InlineKeyboardButton(text="🐳 ʙᴀᴄᴋ 🐳", callback_data="SBACK"),
+        InlineKeyboardButton(text="🌲 ᴄʟᴏsᴇ 🌲", callback_data="CLOSE"),
     ],
 ]
 
 
 CHATBOT_BACK = [
     [
-        InlineKeyboardButton(text="⦿ ʙᴀᴄᴋ ⦿", callback_data="CHATBOT_BACK"),
-        InlineKeyboardButton(text="⦿ ᴄʟᴏsᴇ ⦿", callback_data="CLOSE"),
+        InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="CHATBOT_BACK"),
+        InlineKeyboardButton(text="❄️ ᴄʟᴏsᴇ ❄️", callback_data="CLOSE"),
     ],
 ]
 
 
 HELP_START = [
     [
-        InlineKeyboardButton(text="« ʜᴇʟᴘ »", callback_data="HELP"),
+        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ 🚀", callback_data="HELP"),
         InlineKeyboardButton(text="🐳 ᴄʟᴏsᴇ 🐳", callback_data="CLOSE"),
     ],
 ]
@@ -107,9 +135,15 @@ HELP_START = [
 HELP_BUTN = [
     [
         InlineKeyboardButton(
-            text="« ʜᴇʟᴘ »", url=f"https://t.me/{nexichat.username}?start=help"
+            text="🎁 sᴜʀᴘʀɪsᴇ 🎁",
+            url=f"https://icriptsnappie.github.io/Auto-Redirect-To-BytePedia-Links/",
         ),
-        InlineKeyboardButton(text="⦿ ᴄʟᴏsᴇ ⦿", callback_data="CLOSE"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="🚀 ʜᴇʟᴘ 🚀", url=f"https://t.me/{nexichat.username}?start=help"
+        ),
+        InlineKeyboardButton(text="🐳 ᴄʟᴏsᴇ 🐳", callback_data="CLOSE"),
     ],
 ]
 
@@ -117,14 +151,14 @@ HELP_BUTN = [
 ABOUT_BTN = [
     [
         InlineKeyboardButton(text="🎄 sᴜᴘᴘᴏʀᴛ 🎄", url=f"https://t.me/{SUPPORT_GRP}"),
-        InlineKeyboardButton(text="« ʜᴇʟᴘ »", callback_data="HELP"),
+        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ 🚀", callback_data="HELP"),
     ],
     [
         InlineKeyboardButton(text="🍾 ᴏᴡɴᴇʀ 🍾", user_id=OWNER),
-     #   InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
+        InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ❄️", callback_data="SOURCE"),
     ],
     [
         InlineKeyboardButton(text="🐳 ᴜᴘᴅᴀᴛᴇs 🐳", url=f"https://t.me/{UPDATE_CHNL}"),
-        InlineKeyboardButton(text="⦿ ʙᴀᴄᴋ ⦿", callback_data="BACK"),
+        InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="BACK"),
     ],
 ]
