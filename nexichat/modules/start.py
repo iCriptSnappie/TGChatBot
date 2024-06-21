@@ -42,7 +42,7 @@ async def start(_, m: Message):
             await umm.delete()
             await m.reply_photo(
                 photo=random.choice(IMG),
-                caption=f"""**๏ ʜᴇʏ, ɪ ᴀᴍ {MickeyBot.name}**\n**➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**\n**──────────────**\n**➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**\n<b>๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ</b>""",
+                caption=f"""**๏ ʜᴇʏ, ɪ ᴀᴍ {nexichat.name}**\n**➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**\n**──────────────**\n**➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**\n<b>๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ</b>""",
                 reply_markup=InlineKeyboardMarkup(DEV_OP),
             )
             await asyncio.sleep(2)
