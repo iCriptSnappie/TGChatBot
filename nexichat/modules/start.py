@@ -90,8 +90,9 @@ async def help(client: nexichat, m: Message):
 @nexichat.on_cmd("repo")
 async def repo_command(_, m: Message):
     try:
-        # Replace SOURCE_MEDIA with your actual source for the video
-        await m.send_video(
+        # Assuming `send_video` is provided by `nexichat` or a related library
+        await nexichat.send_video(
+            m.chat_id,
             SOURCE_MEDIA,
             has_spoiler=True
         )
@@ -103,7 +104,6 @@ async def repo_command(_, m: Message):
         )
     except Exception as e:
         print(f"Error in repo_command: {e}")
-        # Add additional error handling if needed
 
 
 @nexichat.on_message(filters.new_chat_members)
