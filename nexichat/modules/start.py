@@ -92,6 +92,7 @@ async def repo(_, m: Message):
     try:
         await m.reply_animation(
             animation=SOURCE_MDEIA,
+            has_spoiler (true)
         )
         await asyncio.sleep(2)
         await m.reply_text(
