@@ -90,7 +90,7 @@ async def help(client: nexichat, m: Message):
 @nexichat.on_cmd("repo")
 async def repo(_, m: Message):
     try:
-        await m.send_video(
+        await m.reply_animation(
             SOURCE_MDEIA,
             has_spoiler=true
         )
