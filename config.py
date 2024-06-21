@@ -13,5 +13,5 @@ MONGO_URL = getenv("MONGO_URL", None)
 OWNER_ID = "6736620260"
 SUPPORT_GRP = "BESTIESZONE2"
 UPDATE_CHNL = "TheBytePedia"
-OWNER_USERNAME = "ll_Feelings_ll"
+OWNER_USERNAME = "iCriptSnappie"
 
