@@ -88,13 +88,16 @@ async def help(client: nexichat, m: Message):
 
 
 @nexichat.on_cmd("repo")
-async def repo(_, m: Message):
+async def repo_command(_, m: Message):
     try:
-        await m.reply_animation(
-            SOURCE_MDEIA,
+        # Replace SOURCE_MEDIA with your actual source for the video
+        await m.send_video(
+            SOURCE_MEDIA,
             has_spoiler=True
         )
-        await asyncio.sleep(2)
+        await asyncio.sleep(2)  # Optional delay after sending the video
+        
+        # Assuming POST_URL is a list of URLs and random.choice selects one
         await m.reply_text(
             text=random.choice(POST_URL)
         )
