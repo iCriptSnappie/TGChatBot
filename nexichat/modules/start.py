@@ -96,7 +96,7 @@ async def repo_command(_, m: Message):
         # Assuming `send_video` is provided by `nexichat` or a related library
         await nexichat.send_video(
             chat_id,
-            SOURCE_MEDIA,
+            SOURCE_MDEIA,
             has_spoiler=True
         )
         await asyncio.sleep(2)  # Optional delay after sending the video
