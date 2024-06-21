@@ -7,8 +7,8 @@ from pyrogram.enums import ChatAction
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import MONGO_URL, MSG_POST_URL
-from Mickey import nexichat
-from Mickey.modules.helpers import CHATBOT_ON, is_admins
+from nexichat import nexichat
+from nexichat.modules.helpers import CHATBOT_ON, is_admins
 
 
 @nexichat.on_cmd("chatbot", group_only=True)
