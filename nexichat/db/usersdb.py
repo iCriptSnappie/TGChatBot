@@ -11,7 +11,7 @@ db = db.users
 
 async def get_users():
   user_list = []
-  async for user in db.users.find({"user": {"$gt": 0}}):
+  async for user in db.users.find({"user_id": {"$gt": 0}}):
     user_list.append(user['user'])
   return user_list
 
@@ -28,7 +28,7 @@ async def add_user(user):
   if user in users:
     return
   else:
-    await db.users.insert_one({"user": user})
+    await db.users.insert_one({"user_id": user})
 
 
 async def del_user(user):
@@ -36,4 +36,4 @@ async def del_user(user):
   if not user in users:
     return
   else:
-    await db.users.delete_one({"user": user})
+    await db.users.delete_one({"user_id": user})
